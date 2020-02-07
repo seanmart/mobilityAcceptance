@@ -3,14 +3,20 @@
     <div class="content">
       <logo/>
     </div>
-    <div class="banner" v-scroll="{ parallax: { ySpeed: -2 } }"/>
+    <div class="banner" v-scroll="{parallax: {min: width.mobile, ySpeed: -2 } }"/>
   </header>
 </template>
 
 <script>
+import width from '@/assets/variables.scss'
 import logo from '@/components/logo'
 export default {
-  components:{logo}
+  components:{logo},
+  data(){
+    return{
+      width
+    }
+  }
 }
 </script>
 
@@ -46,9 +52,13 @@ export default {
     }
 
     @media (max-width: $mobile){
+      height: $unit * 4;
+      .banner{
+        height: 80vh;
+      }
       .content{
         svg{
-          max-width: 70vw;
+          width: 200px;
         }
       }
     }

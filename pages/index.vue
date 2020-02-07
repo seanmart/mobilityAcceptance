@@ -3,6 +3,7 @@
     <div class="content">
       <div class="cards">
         <card
+          v-scroll="{parallax:{ySpeed: 1}}"
           v-for="(card, i) in cards"
           :key="i"
           :title="card.title"
@@ -74,7 +75,7 @@ export default {
         }
       ]
     };
-  }
+  },
 };
 </script>
 
@@ -83,7 +84,6 @@ export default {
   min-height: 100vh;
 
   .content {
-    animation: slide-in 1s;
     padding: 0px $unit $unit;
 
     .cards {
@@ -95,7 +95,7 @@ export default {
 
       .card {
         flex: 1 1 50%;
-        margin: 0px $unit / 2;
+        margin: 0px $unit / 4;
       }
     }
 
@@ -125,14 +125,4 @@ export default {
   }
 }
 
-@keyframes slide-in{
-  0%{
-    transform: translateY(100%);
-    opacity: 0
-  }
-  100%{
-    transform: translateY(0%);
-    opacity: 1
-  }
-}
 </style>
