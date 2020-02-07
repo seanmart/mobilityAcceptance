@@ -56,5 +56,13 @@ export default {
     font-size: 16px;
     font-weight: bold;
   }
+
+  @media (max-width: $mobile){
+    border-radius: 5px;
+    min-height: $unit * 4;
+    .text{
+      padding: $mobileUnit;
+    }
+  }
 }
 </style>
