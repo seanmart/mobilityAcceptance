@@ -91,7 +91,6 @@ export default class{
   }
 
   findByMinimum(data){
-    console.log(data.min)
     return data.reduce((a,c)=> (c.min || 0) < window.innerWidth && !a ? c : a,null)
   }
 
