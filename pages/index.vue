@@ -11,7 +11,7 @@
         />
       </div>
       <div class="section">
-        <h1>what is Mobility Acceptance</h1>
+        <h1>What is Mobility Acceptance?</h1>
         <p>
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
@@ -91,6 +91,7 @@ export default {
 
       .card {
         flex: 1 1 auto;
+        margin: 0px $unit / 2;
       }
     }
 
@@ -115,12 +116,23 @@ export default {
   }
   @media (max-width: $mobile){
     .content{
+      padding: 0px $mobileUnit $mobileUnit;
       .cards{
         flex-direction: column;
         align-items:stretch;
+        margin: 0px;
 
         .card{
-          margin-bottom: $unit;
+          margin: $mobileUnit / 2 0px;
+        }
+      }
+      .section{
+        padding: $unit * 2 0;
+        h1{
+          font-size: 20px;
+        }
+        p{
+          font-size: 14px;
         }
       }
     }

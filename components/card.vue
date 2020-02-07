@@ -21,7 +21,6 @@ export default {
 <style lang="scss">
 .card {
   background: $snow;
-  margin: 0px $unit / 2;
   min-height: $unit * 6;
   border-radius: 10px;
   box-shadow: 0px 30px 40px -20px rgba($abyss, 0.4);

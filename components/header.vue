@@ -31,5 +31,12 @@ export default {
         fill: $snow;
       }
     }
+    @media (max-width: $mobile){
+      .content{
+        svg{
+          width: 60vw;
+        }
+      }
+    }
   }
 </style>
