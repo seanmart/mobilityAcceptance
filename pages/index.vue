@@ -48,25 +48,28 @@
 
 <script>
 import card from "@/components/card";
+import colors from '@/assets/variables.scss'
 export default {
   components: { card },
   data() {
     return {
       cards: [
         {
-          title: "title 1",
-          description: "description 1",
+          title: "Autopal",
+          description: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
           button: {
+            color: colors.money,
             link: "#",
-            label: "view"
+            label: "Go To Autopal"
           }
         },
         {
-          title: "title 2",
-          description: "description 2",
+          title: "Dealer Portal",
+          description: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
           button: {
+            color: colors.water,
             link: "#",
-            label: "view 2"
+            label: "Go To Dealer Portal"
           }
         }
       ]
@@ -80,6 +83,7 @@ export default {
   min-height: 100vh;
 
   .content {
+    animation: slide-in 1s;
     padding: 0px $unit $unit;
 
     .cards {
@@ -90,7 +94,7 @@ export default {
       margin: 0px 0 - $unit / 2 $unit;
 
       .card {
-        flex: 1 1 auto;
+        flex: 1 1 50%;
         margin: 0px $unit / 2;
       }
     }
@@ -99,18 +103,6 @@ export default {
       padding: $unit 0px;
       &.rule{
         border-top: 1px solid rgba($charcoal,.2);
-      }
-
-      h1 {
-        font-size: 25px;
-        margin-bottom:$unit / 2;
-        color: $abyss;
-      }
-
-      p{
-        font-size: 16px;
-        color: $charcoal;
-        line-height: 160%;
       }
     }
   }
@@ -128,14 +120,19 @@ export default {
       }
       .section{
         padding: $unit * 2 0;
-        h1{
-          font-size: 20px;
-        }
-        p{
-          font-size: 14px;
-        }
       }
     }
+  }
+}
+
+@keyframes slide-in{
+  0%{
+    transform: translateY(100%);
+    opacity: 0
+  }
+  100%{
+    transform: translateY(0%);
+    opacity: 1
   }
 }
 </style>

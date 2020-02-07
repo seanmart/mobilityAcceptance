@@ -1,18 +1,18 @@
 <template lang="html">
   <div class="card">
     <div class="text">
-      <h1>{{ title }}</h1>
-      <p>{{ description }}</p>
+      <h1 v-if="title">{{ title }}</h1>
+      <p v-if="description">{{ description }}</p>
     </div>
-    <a :href="button.link">{{ button.label }}</a>
+    <a :href="button.link" :style="{background: button.color}">{{ button.label }}</a>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    title: { type: String, default: "" },
-    description: { type: String, default: "" },
+    title: { type: String, default: null},
+    description: { type: String, default: null },
     button: { type: Object, default: () => ({}) }
   }
 };
@@ -27,41 +27,34 @@ export default {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding: $unit;
 
   .text{
-    padding: $unit;
     flex: 1 1 auto;
+    margin-bottom: $unit;
 
-    h1{
-      font-weight: normal;
-      color: $charcoal;
-      font-size: 25px;
-      margin-bottom: $unit / 2;
-    }
-
-    p{
-      margin-bottom: $unit / 2;
-    }
   }
 
   a{
     flex: 0 0 auto;
-    padding: $unit / 2 0px;
-    background: green;
+    padding: $unit / 1.5 0px;
+    background: $money;
     text-decoration: none;
     color: $snow;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 16px;
+    letter-spacing: 1px;
+    font-size: 15px;
     font-weight: bold;
+    border-radius: 5px;
   }
 
   @media (max-width: $mobile){
     border-radius: 5px;
     min-height: $unit * 4;
+    padding: $mobileUnit;
     .text{
-      padding: $mobileUnit;
+      margin-bottom: $mobileUnit;
     }
   }
 }

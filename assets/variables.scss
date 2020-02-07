@@ -1,9 +1,20 @@
 $abyss: #07214f;
 $snow: #fafefd;
-$silver: #f2f2f2;
+$silver: #eaeaea;
 $charcoal: #222;
+$money: #23BA71;
+$water: #41BCF2;
 
-$unit: 50px;
+$unit: 40px;
 $mobileUnit: 25px;
 
 $mobile: 700px;
+
+:export {
+  abyss: $abyss;
+  snow: $snow;
+  silver: $silver;
+  charcoal: $charcoal;
+  money: $money;
+  water: $water;
+}

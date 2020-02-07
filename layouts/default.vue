@@ -1,7 +1,6 @@
 <template>
   <div id="site" v-scroll:section>
-    <the-header />
-    <div class="banner" v-scroll="{ parallax: { ySpeed: -2 } }" />
+    <the-header/>
     <nuxt />
     <the-footer />
   </div>
@@ -34,16 +33,6 @@ html {
 }
 
 #site {
-  .banner {
-    position: absolute;
-    z-index: -1;
-    background: $abyss;
-    background: linear-gradient(0deg,lighten($abyss,5%) 1%, $abyss 100%);
-    width: 100%;
-    height: $unit * 8;
-    left: 0px;
-    top: 0px;
-  }
   .content {
     max-width: 1000px;
     margin: 0px auto;
@@ -53,10 +42,27 @@ html {
     font-family: 'Roboto', sans-serif;
   }
 
+  h1{
+    font-size: 22px;
+    font-weight: bold;
+    color: $abyss;
+    margin-bottom: $unit / 3;
+  }
+
+  p{
+    font-size: 16px;
+    color: $charcoal;
+    line-height: 150%;
+  }
+
   @media (max-width: $mobile){
-    .banner{
-      //height: 100vh;
+    h1{
+      font-size: 20px;
+    }
+    p{
+      font-size: 14px;
     }
   }
+
 }
 </style>

@@ -1,5 +1,9 @@
 <template lang="html">
-  <footer>footer</footer>
+  <footer>
+    <div class="content">
+      footer
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -12,5 +16,9 @@ footer {
   background: $charcoal;
   color: $snow;
   padding: $unit;
+
+  .content{
+    padding:$unit;
+  }
 }
 </style>
