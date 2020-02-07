@@ -10,5 +10,7 @@ export default {};
 footer {
   height: 400px;
   background: $charcoal;
+  color: $snow;
+  padding: $unit;
 }
 </style>
