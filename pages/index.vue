@@ -91,7 +91,7 @@ export default {
       flex-direction: row;
       justify-content: center;
       align-items: flex-start;
-      margin: 0px 0 - $unit / 2 $unit;
+      margin: 0px 0 - $unit / 2 0px;
 
       .card {
         flex: 1 1 50%;
@@ -100,7 +100,7 @@ export default {
     }
 
     .section {
-      padding: $unit 0px;
+      padding: $unit * 2 0px;
       &.rule{
         border-top: 1px solid rgba($charcoal,.2);
       }
@@ -117,9 +117,6 @@ export default {
         .card{
           margin: $mobileUnit / 2 0px;
         }
-      }
-      .section{
-        padding: $unit * 2 0;
       }
     }
   }

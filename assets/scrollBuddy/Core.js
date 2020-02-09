@@ -4,11 +4,7 @@ import Element from './Element'
 export default class {
   constructor(options = {}){
 
-    Object.assign(this, {
-      inertia: .8,
-      smooth: true,
-      el: document.getElementsByTagName('body')[0].firstElementChild
-    }, options);
+    Object.assign(this, {}, options);
 
     this.stop = options.stop || false
     this.checkScroll = this.checkScroll.bind(this);
@@ -16,13 +12,13 @@ export default class {
     this.windowHeight = window.innerHeight
     this.windowWidth = window.innerWidth
     this.shouldUpdate = null
-    this.isTicking = false;
+    this.isTicking = false
     this.inertia = this.inertia * .1
     this.inertiaRatio = 1;
     this.elements = [];
     this.instance = {
       scroll:{x: 0,y:0},
-      limit: this.el.offsetHeight - this.windowHeight
+      limit: this.el.offsetHeight - this.windowHeight,
     }
 
     window.scrollTo(0,0)
@@ -179,11 +175,7 @@ export default class {
 
           if (current.transform){
             current.el.style.transition = transition ? 'transform 1s' : ''
-
-            let transform = `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${distance.x},${distance.y},0,1)`;
-            current.el.style.webkitTransform = transform;
-            current.el.style.msTransform = transform;
-            current.el.style.transform = transform;
+            this.transform(current.el, distance.y,distance.x)
           } else {
             console.log(current)
           }
@@ -211,6 +203,14 @@ export default class {
   // SET ----------------------------------
   setScrollLimit() {
     this.instance.limit = this.el.offsetHeight - this.windowHeight;
+  }
+
+  // TRANSFORM ----------------------------
+  transform(el,y = 0,x = 0){
+    let transform = `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${x},${y},0,1)`;
+    el.style.webkitTransform = transform;
+    el.style.msTransform = transform;
+    el.style.transform = transform;
   }
 
 }

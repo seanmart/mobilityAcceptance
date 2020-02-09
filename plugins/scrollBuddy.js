@@ -2,7 +2,8 @@ import scrollBuddy from '@/assets/scrollBuddy'
 import Vue from 'vue'
 
 let sb = new scrollBuddy({
-  smooth: true
+  smooth: true,
+  scrollbarColor: 'rgba(0,0,0,.4)'
 })
 
 Vue.directive('scroll',{
