@@ -12,7 +12,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.jpg' },
       { rel:"stylesheet", href:"https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i&display=swap"},
       { rel:"stylesheet", href:"https://fonts.googleapis.com/css?family=Roboto:900&display=swap"}
     ]
