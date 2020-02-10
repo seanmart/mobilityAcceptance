@@ -43,16 +43,16 @@ html {
   }
 
   h1{
-    font-size: 22px;
+    font-size: 21px;
     font-weight: bold;
     color: $abyss;
     margin-bottom: $unit / 3;
   }
 
   p{
-    font-size: 16px;
+    font-size: 14px;
     color: $charcoal;
-    line-height: 150%;
+    line-height: 160%;
   }
 
   @media (max-width: $mobile){
@@ -60,8 +60,52 @@ html {
       font-size: 20px;
     }
     p{
-      font-size: 14px;
+      font-size: 15px;
     }
+  }
+
+  @keyframes above{
+    0%{
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes below{
+    0%{
+      opacity: 0;
+      transform: translateY(10%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes side{
+    0%{
+      opacity: 0;
+      transform: translateX(-5%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+
+  @keyframes above-show{
+    0%{transform: translateY(-10%);}
+    100%{transform: translateY(0%);}
+  }
+
+  @keyframes below-show{
+    0%{transform: translateY(10%);}
+    100%{transform: translateY(0%);}
   }
 
 }

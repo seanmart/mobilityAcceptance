@@ -4,7 +4,7 @@
       <h1 v-if="title">{{ title }}</h1>
       <p v-if="description">{{ description }}</p>
     </div>
-    <a :href="button.link" :style="{background: button.color}">{{ button.label }}</a>
+    <a :href="button.link" :class="button.color">{{ button.label }}</a>
   </div>
 </template>
 
@@ -19,6 +19,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 .card {
   background: $snow;
   min-height: $unit * 6;
@@ -38,7 +39,6 @@ export default {
   a{
     flex: 0 0 auto;
     padding: $unit / 1.5 0px;
-    background: $money;
     text-decoration: none;
     color: $snow;
     text-align: center;
@@ -47,6 +47,29 @@ export default {
     font-size: 15px;
     font-weight: bold;
     border-radius: 5px;
+    transition: transform .25s, background .25s, box-shadow .25s;
+    position: relative;
+    overflow: hidden;
+
+    &.green{
+      background: $money;
+
+      &:hover{
+        background: saturate($money, 10%);
+      }
+      &:active{
+        transform: translateY(1px);
+      }
+    }
+    &.blue{
+      background: $water;
+      &:hover{
+        background: darken(saturate($water, 10%),10%);
+      }
+      &:active{
+        transform: translateY(1px);
+      }
+    }
   }
 
   @media (max-width: $mobile){

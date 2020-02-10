@@ -59,7 +59,7 @@ export default {
           title: "Autopal",
           description: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
           button: {
-            color: colors.money,
+            color: 'green',
             link: "#",
             label: "Go To Autopal"
           }
@@ -68,7 +68,7 @@ export default {
           title: "Dealer Portal",
           description: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form',
           button: {
-            color: colors.water,
+            color: 'blue',
             link: "#",
             label: "Go To Dealer Portal"
           }

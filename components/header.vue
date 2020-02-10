@@ -1,9 +1,11 @@
 <template lang="html">
   <header>
     <div class="content">
-      <logo/>
+      <div class="logo" v-scroll="{parallax:{ySpeed:2}}">
+        <logo/>
+      </div>
     </div>
-    <div class="banner" v-scroll="{parallax: {min: width.mobile, ySpeed: -2 } }"/>
+    <div class="banner"/>
   </header>
 </template>
 
@@ -22,6 +24,8 @@ export default {
 
 <style lang="scss">
   header{
+    position: relative;
+    z-index: -1;
     height: $unit * 6;
     .banner{
       position: absolute;
@@ -31,7 +35,6 @@ export default {
       width: 100%;
       left: 0px;
       top: 0px;
-      animation: shrink 2s;
       height: $unit * 10;
     }
 

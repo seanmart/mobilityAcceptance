@@ -67,7 +67,7 @@ export default class extends Core{
                                    'border-radius: 20px;' +
                                    'top: 0px;' +
                                    'right: 2.5px;' +
-                                   'width: 15px;' +
+                                   'width: 12px;' +
                                    'transition: opacity .5s;' +
                                    'opacity: 0;' +
                                    `height: ${height}px;` +
@@ -152,6 +152,7 @@ export default class extends Core{
     this.isTouchingScrollbar = true
     this.instance.scrollbar.offset = e.clientY
     this.instance.scrollbar.lastY = this.instance.scroll.y
+    this.scrollbar.style.opacity = 1
   }
   moveScrollbar(e){
     if (this.isTouchingScrollbar){
