@@ -5,7 +5,7 @@ export default {
    description: "Make a payment using your debit card",
    button: {
     color: "green",
-    link: "#",
+    link: "https://mac.autopal.info/apps/projects/autopal/userSite/login.htp",
     label: "Make Payment"
    }
   },
@@ -14,7 +14,7 @@ export default {
    description: "Login to see the status of the deals in your pipeline",
    button: {
     color: "blue",
-    link: "#",
+    link: "https://mobilityacceptance.apptraker.com/dealer/login",
     label: "Login"
    }
   }

@@ -4,7 +4,7 @@
       <h1 v-if="title">{{ title }}</h1>
       <p v-if="description">{{ description }}</p>
     </div>
-    <a :href="button.link" :class="button.color">{{ button.label }}</a>
+    <a :href="button.link" :class="button.color" target="_blank">{{ button.label }}</a>
   </div>
 </template>
 
