@@ -23,7 +23,9 @@ export default {
   header{
     height: $header;
     width: 100%;
-    position: fixed;
+    top: 0px;
+    left: 0px;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
