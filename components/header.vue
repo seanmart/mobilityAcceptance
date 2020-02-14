@@ -1,11 +1,8 @@
 <template lang="html">
   <header>
-    <div class="content">
       <div class="logo" v-scroll="{parallax:{ySpeed:2}}">
         <logo/>
       </div>
-    </div>
-    <div class="banner"/>
   </header>
 </template>
 
@@ -24,45 +21,25 @@ export default {
 
 <style lang="scss">
   header{
-    position: relative;
-    z-index: -1;
-    height: $unit * 6;
-    .banner{
-      position: absolute;
-      z-index: -1;
-      background: $abyss;
-      background: linear-gradient(0deg,lighten($abyss,5%) 1%, $abyss 100%);
-      width: 100%;
-      left: 0px;
-      top: 0px;
-      height: $unit * 10;
-    }
+    height: $header;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: white;
 
-    .content{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-      color: white;
-      height: 100%;
-
-      svg{
-        flex: 0 0 auto;
-        width: 300px;
-        fill: $snow;
-      }
+    svg{
+      flex: 0 0 auto;
+      width: 300px;
+      fill: $snow;
     }
 
     @media (max-width: $mobile){
-      height: $unit * 4;
-      .banner{
-        height: 80vh;
-      }
-      .content{
-        svg{
-          width: 200px;
-        }
+      height: $mobileHeader;
+      svg{
+        width: 200px;
       }
     }
   }

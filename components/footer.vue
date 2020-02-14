@@ -1,24 +1,47 @@
 <template lang="html">
   <footer>
     <div class="content">
-      footer
+      <img src="cigarbreak.svg"/>
+      <p v-html="data.footer.text"/>
+      <p class="copyright">© Cigar Break {{new Date().getFullYear()}}</p>
     </div>
   </footer>
 </template>
 
 <script>
-export default {};
+import data from '@/assets/data'
+export default {
+  data(){return{data}}
+};
 </script>
 
 <style lang="scss">
 footer {
-  height: 400px;
-  background: $charcoal;
-  color: $snow;
-  padding: $unit;
+  background: $silverShade;
+  padding: $unit * 2 $unit;
 
   .content{
-    padding:$unit;
+    img{
+      display: block;
+      width: 150px;
+      margin: 0px auto 30px;
+    }
+
+    p{
+      color: $snow;
+      opacity: .5;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+
+    }
+  }
+
+  @media (max-width: $mobile){
+    padding: $mobileUnit * 2 $mobileUnit;
+
+    .copyright{
+      margin-top: 30px;
+    }
   }
 }
 </style>

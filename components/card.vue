@@ -45,7 +45,6 @@ export default {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 15px;
-    font-weight: bold;
     border-radius: 5px;
     transition: transform .25s, background .25s, box-shadow .25s;
     position: relative;

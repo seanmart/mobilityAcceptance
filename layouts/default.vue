@@ -32,36 +32,38 @@ html {
   margin: 0;
 }
 
+a{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
+h1{
+  font-size: 21px;
+  font-weight: 700;
+  color: $abyss;
+  margin-bottom: $unit / 3;
+  font-family: 'Roboto', sans-serif;
+}
+
+p{
+  font-size: 14px;
+  color: $charcoal;
+  line-height: 160%;
+}
+
+@media (max-width: $mobile){
+  h1{
+    font-size: 20px;
+  }
+  p{
+    font-size: 15px;
+  }
+}
+
 #site {
   .content {
-    max-width: 1000px;
+    max-width: $siteWidth;
     margin: 0px auto;
-  }
-
-  a{
-    font-family: 'Roboto', sans-serif;
-  }
-
-  h1{
-    font-size: 21px;
-    font-weight: bold;
-    color: $abyss;
-    margin-bottom: $unit / 3;
-  }
-
-  p{
-    font-size: 14px;
-    color: $charcoal;
-    line-height: 160%;
-  }
-
-  @media (max-width: $mobile){
-    h1{
-      font-size: 20px;
-    }
-    p{
-      font-size: 15px;
-    }
   }
 
   @keyframes above{
