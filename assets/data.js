@@ -2,11 +2,11 @@ export default {
  cards: [
   {
    title: "Pay Online",
-   description: "Make a payment using your debit card",
+   description: "Pay online, safe and securely",
    button: {
     color: "green",
     link: "https://mac.autopal.info/apps/projects/autopal/userSite/login.htp",
-    label: "Make Payment"
+    label: "Make A Payment"
    }
   },
   {
@@ -21,23 +21,31 @@ export default {
  ],
  sections: [
   {
-   title: "About Us",
-   text: `Mobility Acceptance is the nation’s largest non-bank lender to the Wheelchair Accessible Vehicle Industry.
-   We work though an ever-growing dealer base to provide credit to disabled Americans. We offer a full range of credit,
-   from Prime to Subprime and back again. At Mobility Acceptance, we understand that you may have had credit issues
-   in the past because of an accident, injury or disability. That is why we provide a unique range of financial services
-   which focus on your future and help you regain your independence. We listen to your situation and develop loan
-   programs which meet your needs.<br/><br/>
-
-   Craig Baker is the founder of Cigar Break Asset Management. He is a private credit expert. Cigar Break is
-   a non-bank financial institution. Previously, Craig founded Integrated Finance Company, and Mobility Acceptance,
-   (now the verticals of the firm). Craig has over 25 years of financial management and lending experience. Before creating
-   Cigar Break and its verticals, he worked for Sargent Investors. Sargent Investors was a privately held community
-   bank holding company. Craig ran the auto, and mortgage lending units and the retail branch network. Prior to that,
-   he worked for Ernst and Young in the Boston Massachusetts office. Craig graduated Cum Laude from the Questrom School
-   of Business at Boston University with a Bachelor Science degree with a dual concentration in Accounting and Finance.
-   He also received his MBA from Boston University and has graduated from the Ritz Carlton Leadership program.
-   Craig was a varsity soccer player, appearing in 2 NCAA tournaments. He also trained with Atletico Minero in Belo Horizante, Brazil.`
+   title: "About",
+   text: `Mobility Acceptance is the largest non-bank lender in the Wheelchair Accessibility Vehicles
+          in the United States. Founded in 2014, by Craig A Baker, CPA. The company made its first loan
+          in 2013 and has developed a unique understanding of the wheelchair accessible vehicle industry.`
+  },
+  {
+   title: "To Our Customer",
+   text: `We are here to provide you financing to purchase a wheelchair accessible vehicle. We understand
+          that you may have had credit issues in the past because of an accident, injury or disability.
+          That is why we provide a unique range of financial services which focus on your future and help
+          you regain your independence. We listen to your situation and develop loan programs which meet your needs.`
+  },
+  {
+   title: "To Our Dealers",
+   text: `We are here to help you assist your clients purchase a vehicle which meets their specific needs.
+          We offer programs for Super Prime to Sub Prime, for New-New, New-Used, and Used-Used. We have no
+          mileage or age limitations on vehicles. We understand your unique relationship with your clients,
+          and we work to support it. `
+  },
+  {
+   title: "Licensing",
+   text: `Cigar Break Credit, LLC DBA Mobility Acceptance NMLS 70460, Texas Motor Vehicle Sales License
+          19000063752-162205: Maryland, Sales Finance License 4282, New Jersey 1903990-630, Pennsylvania
+          Sales Finance License 70460, Michigan Sales Finance Company 0022386. Mobility Acceptance Co,
+          LLC, DBA Mobility Acceptance, Florida Sales Finance Company SF9901772.`
   }
 ],
 footer:{
