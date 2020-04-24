@@ -4,7 +4,6 @@
     <div class="content">
       <div class="cards">
         <card
-          v-scroll="{parallax:{ySpeed: 1}}"
           v-for="(card, i) in data.cards"
           :key="i"
           :title="card.title"
@@ -49,7 +48,7 @@ export default {
 
   .banner{
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     width: 100%;
     left: 0px;
     top: 0px;
@@ -58,7 +57,7 @@ export default {
   }
 
   .content{
-
+    position: relative; z-index: 1;
     .cards {
       padding-top: $header;
       display: flex;

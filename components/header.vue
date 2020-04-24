@@ -1,6 +1,6 @@
 <template lang="html">
   <header>
-      <div class="logo" v-scroll="{parallax:{ySpeed:2}}">
+      <div class="logo" >
         <logo/>
       </div>
   </header>
@@ -29,7 +29,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
     color: white;
 
     svg{

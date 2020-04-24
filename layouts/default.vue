@@ -1,5 +1,5 @@
 <template>
-  <div id="site" v-scroll:section>
+  <div id="site">
     <the-header/>
     <nuxt />
     <the-footer />
@@ -22,7 +22,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  background: $silver;
+  background: $abyss;
 }
 
 *,
@@ -61,6 +61,7 @@ p{
 }
 
 #site {
+  background: $silver;
   .content {
     max-width: $siteWidth;
     margin: 0px auto;

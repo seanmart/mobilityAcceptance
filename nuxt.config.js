@@ -30,7 +30,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: "~/plugins/scrollBuddy", ssr: false }
+    //{ src: "~/plugins/scrollBuddy", ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
