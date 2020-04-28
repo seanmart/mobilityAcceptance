@@ -3,7 +3,7 @@
     <div class="content">
       <img src="cigarbreak.svg"/>
       <p v-html="data.footer.text"/>
-      <p class="copyright">© Cigar Break {{new Date().getFullYear()}}</p>
+      <p class="copyright">© {{new Date().getFullYear()}} Cigar Break Asset Management</p>
     </div>
   </footer>
 </template>
@@ -29,7 +29,7 @@ footer {
 
     p{
       color: $snow;
-      opacity: .5;
+      opacity: .7;
       text-align: center;
       font-family: 'Roboto', sans-serif;
 
