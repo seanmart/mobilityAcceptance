@@ -5,7 +5,7 @@ export default {
    description: "Pay online, safe and securely",
    button: {
     color: "green",
-    link: "https://mac.autopal.info/apps/projects/autopal/userSite/login.htp",
+    link: "https://mac.autopal.info/apps/projects/autopal/userSite/",
     label: "Make A Payment"
    }
   },
