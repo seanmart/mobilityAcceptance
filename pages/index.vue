@@ -38,7 +38,7 @@ export default {
 
 @mixin bluefade{
   background: $abyss;
-  background: linear-gradient(0deg,lighten($abyss,5%) 1%, $abyss 100%);
+  background: linear-gradient(180deg, $abyss 0%, $abyssbright 100%);
 }
 
 #home {
