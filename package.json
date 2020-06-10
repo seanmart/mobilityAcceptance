@@ -20,5 +20,7 @@
     "sass-loader": "^8.0.2",
     "virtual-scroll": "^1.5.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "push-dir": "^0.4.1"
+  }
 }
